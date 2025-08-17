@@ -121,10 +121,11 @@ function App() {
   ]
 
   return (
-            { id: 'certifications', label: 'Certifications', color: 'purple' },
-            { id: 'about', label: 'About', color: 'blue' },
-            { id: 'contact', label: 'Contact', color: 'orange' }
-          ].map(({ id, label, color }) => (
+    <div>
+      {/* Profile Section */}
+      <section id="profile" className="min-h-screen flex items-center justify-center px-6 py-20 relative z-10">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="relative z-10">
             <h1 className="text-6xl md:text-8xl font-extrabold mb-4 animate-slide-up text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
               My name is
             </h1>
@@ -223,15 +224,34 @@ function App() {
                   {showSkillImages ? (
                     <div className="relative w-32 h-32 flex items-center justify-center">
                       <img 
-                        key={skillIndex}
-                        className="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-xs border border-cyan-500/30 hover:bg-cyan-500/30 transition-colors cursor-default flex items-center gap-1"
-                      >
-                        {skill.icon && <img src={skill.icon} alt={skill.name} className="w-3 h-3" />}
-                        {skill.name}
-                      </div>
-                    ))}
-            ))}
-          </div>
+                        key={currentSkillIndex}
+                        src={skillImages[currentSkillIndex].icon}
+                        alt={skillImages[currentSkillIndex].name}
+                        className="w-24 h-24 object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <TypeAnimation
+                      sequence={[
+                        'Python', 1000,
+                        'C++', 1000,
+                        'Java', 1000,
+                        'Data Analysis', 1000,
+                        'Deep Learning', 1000,
+                        'NLP', 1000,
+                        'Generative AI', 1000,
+                        'Prompt Engineering', 1000,
+                        'Cloud Platforms', 1000
+                      ]}
+                      wrapper="span"
+                      speed={50}
+                      repeat={Infinity}
+                      className="text-4xl md:text-6xl font-extrabold text-white"
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
 
           <div className="text-center mt-12">
             <a href="/Rohith_Varma_Suraparaju_Resume.pdf" download="Rohith_Varma_Suraparaju_Resume.pdf">
@@ -276,6 +296,7 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
         </div>
       </section>
 
@@ -346,12 +367,12 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-8 text-gray-500 text-sm relative z-10">
-        <p>&copy; {new Date().getFullYear()} Rohith Varma Suraparaju. All rights reserved.</p>
+      <footer className="py-8 text-center text-gray-400 text-sm relative z-10">
+        <p>&copy; {new Date( ).getFullYear()} Rohith Varma Suraparaju. All rights reserved.</p>
+        <p>Made with Manus</p>
       </footer>
     </div>
   )
+}
 
 export default App
-
-
