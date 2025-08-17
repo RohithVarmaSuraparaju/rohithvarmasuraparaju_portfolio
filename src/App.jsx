@@ -210,14 +210,14 @@ function App() {
               developer
             </h3>
             <p className="text-cyan-400 text-xl mb-8">Hello, Welcome to my Portfolio.</p>
-                  Master's student in Data Science and Artificial Intelligence with expertise in Python, C++, and Java. 
+            <p className="text-gray-300 leading-relaxed">
+                  Master\"s student in Data Science and Artificial Intelligence with expertise in Python, C++, and Java. 
                   Skilled in machine learning, deep learning, and NLP using TensorFlow, PyTorch, Keras, NLTK, spaCy, GPT, and sentiment analysis. 
                   Proficient in generative AI tools including OpenAI LLMs, Hugging Face LLMs, LangChain, RAG, GANs, VAEs, and diffusion models. 
                   Passion for building scalable, ethical, and data-driven AI solutions for impactful business decision-making.
                 </p>
-              </div>
-            </div>
-            <div className="flex justify-center">
+          </div>
+          <div className="flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-yellow-500 rounded-full blur-2xl opacity-50 animate-pulse"></div>
                 <div className="relative w-80 h-80 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
@@ -304,7 +304,7 @@ function App() {
       <section id="contact" className="min-h-screen flex items-center justify-center px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-4">Get in Touch</h2>
-          <p className="text-gray-300 text-xl mb-12">Let's connect and discuss your next project!</p>
+          <p className="text-gray-300 text-xl mb-12">Let\'s connect and discuss your next project!</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative group">
