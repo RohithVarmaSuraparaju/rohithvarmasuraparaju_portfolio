@@ -1,0 +1,6 @@
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Custom animations */
+@keyframes fadeIn {
